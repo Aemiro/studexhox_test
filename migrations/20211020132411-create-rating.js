@@ -9,16 +9,16 @@ module.exports = {
         defaultValue: Sequelize.UUIDV4,
       },
       score: {
-        type: Sequelize.NUMBER
+        type: Sequelize.INTEGER
       },
       description: {
         type: Sequelize.STRING
       },
       student_id: {
-        type: Sequelize.STRING
+        type: Sequelize.UUID
       },
       course_id: {
-        type: Sequelize.STRING
+        type: Sequelize.UUID
       },
       createdAt: {
         allowNull: false,

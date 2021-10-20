@@ -11,8 +11,10 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      Rating.belongsTo(models.Course);
+      Rating.belongsTo(models.Student);
     }
-  };
+  }
   Rating.init({
     id: {
       allowNull: false,
@@ -20,10 +22,10 @@ module.exports = (sequelize, DataTypes) => {
       type: Sequelize.UUID,
       defaultValue: Sequelize.UUIDV4,
     },
-    score: DataTypes.NUMBER,
-    description: DataTypes.STRING,
-    student_id: DataTypes.STRING,
-    course_id: DataTypes.STRING
+    score: DataTypes.INTEGER,
+    description: DataTypes.TEXT,
+    student_id: Sequelize.UUID,
+    course_id: Sequelize.UUID
   }, {
     sequelize,
     modelName: 'Rating',
