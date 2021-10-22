@@ -13,6 +13,25 @@ module.exports = {
       },
       email: {
         type: Sequelize.STRING,
+        unique:true
+      },
+      phone: {
+        type: Sequelize.STRING,
+        unique:true
+      },
+
+      current_class:{
+        type:Sequelize.STRING,
+        allowNull: true,
+      },
+      department:{
+        type:Sequelize.STRING,
+        allowNull: true
+      },
+
+      gender:{
+        type:Sequelize.STRING,
+        allowNull: true
       },
       createdAt: {
         allowNull: false,

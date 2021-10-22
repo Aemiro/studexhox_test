@@ -23,7 +23,26 @@ module.exports = (sequelize, DataTypes) => {
       defaultValue: Sequelize.UUIDV4,
     },
     name: DataTypes.STRING,
-    email: DataTypes.STRING
+    email: {
+      type:DataTypes.STRING,
+      unique:true
+    },
+    phone:{
+      type:DataTypes.STRING,
+      unique:true
+    },
+    current_class:{
+      type:DataTypes.STRING,
+      allowNull: true,
+    },
+    department:{
+      type:DataTypes.STRING,
+      allowNull: true
+    },
+    gender:{
+      type:DataTypes.STRING,
+      allowNull: true
+    }
   }, {
     sequelize,
     modelName: 'Student',

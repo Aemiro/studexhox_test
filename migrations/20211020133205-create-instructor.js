@@ -9,13 +9,16 @@ module.exports = {
         defaultValue: Sequelize.UUIDV4,
       },
       name: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
+        allowNull:false
       },
       email: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
+        allowNull:false
       },
       phone_number: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
+        allowNull:false
       },
       about: {
         type: Sequelize.TEXT
@@ -24,7 +27,11 @@ module.exports = {
         type: Sequelize.STRING
       },
       status: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
+        defaultValue: "active"
+      },
+      award:{
+        type:Sequelize.STRING,
       },
       createdAt: {
         allowNull: false,
