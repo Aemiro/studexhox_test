@@ -5,5 +5,7 @@ const router = express.Router();
 router.get('/', (req, res, next)=> {
     res.json({ title: 'Get Video lecture' });
 });
-
+router.post('/create',async(req,res)=>{
+    res.json({msg:"Welcome to studyhox"})
+})
 module.exports = router;
